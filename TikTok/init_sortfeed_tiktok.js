@@ -7,39 +7,32 @@ function handle_errors_tiktok(e, r) {
       }),
       !1
     );
-  {
-    let t = document.querySelector('[data-e2e="videos-tab"]');
-    if (t !== null)
-      if (t.getAttribute("aria-selected") === "true") {
-        let o = document.querySelector('div[data-compact="true"]');
-        return Array.from(o.querySelectorAll("button")).findIndex(
-          (s) => s.getAttribute("data-active") === "true"
-        ) === 0
-          ? !0
-          : (chrome.runtime.sendMessage({
-              sort_feed_error: !0,
-              error_type: "latest_tab_tiktok",
-            }),
-            !1);
-      } else
-        return (
-          chrome.runtime.sendMessage({
-            sort_feed_error: !0,
-            error_type: "video_tab_tiktok",
-          }),
-          !1
-        );
-    else
-      return (
-        console.log("PROFILE PAGE ERROR ON TIKTOK"),
-        chrome.runtime.sendMessage({
-          sort_feed_error: !0,
-          error_type: "profile_page_tiktok",
-        }),
-        !1
-      );
+
+  // Check if we're on the videos tab
+  let videosTab = document.querySelector('[data-e2e="videos-tab"]');
+  if (videosTab === null) {
+    console.log("VIDEOS TAB NOT FOUND ON TIKTOK");
+    chrome.runtime.sendMessage({
+      sort_feed_error: !0,
+      error_type: "profile_page_tiktok",
+    });
+    return !1;
   }
+
+  if (videosTab.getAttribute("aria-selected") !== "true") {
+    chrome.runtime.sendMessage({
+      sort_feed_error: !0,
+      error_type: "video_tab_tiktok",
+    });
+    return !1;
+  }
+
+  // TikTok has removed the Latest/Popular toggle buttons
+  // If we're on the Videos tab, we can proceed with sorting
+  console.log("TikTok Videos tab confirmed - proceeding with sort");
+  return true;
 }
+
 chrome.runtime.onMessage.addListener((e, r, t) => {
   e.action === "refreshPageTikTok" &&
     (console.log("It's working!"),
@@ -53,7 +46,6 @@ chrome.runtime.onMessage.addListener((e, r, t) => {
       sessionStorage.removeItem("sortFeedStopSorting"),
       sessionStorage.setItem("sortFeedSortBy", e.sort_by),
       sessionStorage.setItem("sortFeedNoItems", e.no_items),
-      sessionStorage.setItem("sortFeedStatusTikTok", !0),
       sessionStorage.setItem("sortItemsVsDates", e.dates_items),
       window.location.reload()));
 });
