@@ -1,259 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sort my reels</title>
-    <link rel="stylesheet" type="text/css" href="Animate/animate.css">
-    <link rel="stylesheet" href="popup_styles/popup_subs.css">
-    <link rel="stylesheet" href="popup_styles/popup.css">
-</head>
-<body>
-  <div class="main_div animate__animated animate__zoomIn">
-    <div class="chrome">
-      <div class="header">
-        <div style="display: flex;">
-        <img id="image_logo" class="image_logo animate__animated animate__bounceInDown" src="Icons/sortFeedLogo.svg">
-        <!-- <img id="yellowBox" class="yellowBox" src="Icons/YellowC.svg"> -->
-        <h1 class="heading">Sort Feed</h1>
-        </div>
-        <span class="beta">Free</span>
-      </div>
-
-      <div class="nav_buttons">
-        <div class="main_nav_div_parent">
-
-          <!-- Zero state -->
-          <div class="main_nav_div_zero_state">
-            <label style="font-weight: 400; font-size: 13px; color: black; padding-left: 15px;">
-              What are we sorting today?
-            </label>
-
-            <div style="padding: 10px 15px 0 15px;">
-              <div>
-                <button id="instaButton" class="zeroStateButtonMain">
-                  <div>
-                    <img src="Icons/ZeroStateIcons/Insta.svg" style="width: 10px; margin-right: 10px;" />
-                    Instagram
-                  </div>
-                  <img src="Icons/ZeroStateIcons/arrow.svg" style="width: 5px;" />
-                </button>
-
-                <button id="tiktokButton" class="zeroStateButtonMain">
-                  <div>
-                    <img src="Icons/ZeroStateIcons/tiktok.svg" style="width: 10px; margin-right: 10px;" />
-                    TikTok
-                  </div>
-                  <img src="Icons/ZeroStateIcons/arrow.svg" style="width: 5px;" />
-                </button>
-              </div>
-            </div>
+    <link rel="stylesheet" type="text/css" href="Animate/animate.css" />
+    <link rel="stylesheet" href="popup_styles/popup_subs.css" />
+    <link rel="stylesheet" href="popup_styles/popup.css" />
+  </head>
+  <body>
+    <div class="main_div animate__animated animate__zoomIn">
+      <div class="chrome">
+        <div class="header">
+          <div style="display: flex">
+            <img
+              id="image_logo"
+              class="image_logo animate__animated animate__bounceInDown"
+              src="Icons/sortFeedLogo.svg"
+            />
+            <!-- <img id="yellowBox" class="yellowBox" src="Icons/YellowC.svg"> -->
+            <h1 class="heading">Sort Feed</h1>
           </div>
+          <span class="beta">Free</span>
+        </div>
 
-          <!-- Add License Key Page -->
-          <div class="main_nav_div_zero_state_sub">
+        <div class="nav_buttons">
+          <div class="main_nav_div_parent">
+            <!-- Zero state -->
+            <div class="main_nav_div_zero_state">
+              <label
+                style="
+                  font-weight: 400;
+                  font-size: 13px;
+                  color: black;
+                  padding-left: 15px;
+                "
+              >
+                What are we sorting today?
+              </label>
 
-            <label style="font-weight: 400; font-size: 12px; color: black; padding-left: 15px;">
-              Let's activiate Pro
-            </label>
+              <div style="padding: 10px 15px 0 15px">
+                <div>
+                  <button id="instaButton" class="zeroStateButtonMain">
+                    <div>
+                      <img
+                        src="Icons/ZeroStateIcons/Insta.svg"
+                        style="width: 10px; margin-right: 10px"
+                      />
+                      Instagram
+                    </div>
+                    <img
+                      src="Icons/ZeroStateIcons/arrow.svg"
+                      style="width: 5px"
+                    />
+                  </button>
 
-            <div style="padding: 8px 15px 0 15px;">
-              <div>
-
-                <div class="input-container_sub">
-                  <!-- <span class="input-icon_sub">🔑</span> -->
-                  <img src="Icons/ZeroStateIcons/keyLogo.svg" class="input-icon_sub" />
-
-                  <input 
-                    type="text" 
-                    placeholder="License Key" 
-                    class="license-input_sub"
-                  />
+                  <button id="tiktokButton" class="zeroStateButtonMain">
+                    <div>
+                      <img
+                        src="Icons/ZeroStateIcons/tiktok.svg"
+                        style="width: 10px; margin-right: 10px"
+                      />
+                      TikTok
+                    </div>
+                    <img
+                      src="Icons/ZeroStateIcons/arrow.svg"
+                      style="width: 5px"
+                    />
+                  </button>
                 </div>
-                <label class="license_key_message" >You'll find the key in your inbox after purchase</label>
+              </div>
+            </div>
 
-                
-                <button id="activiatePro" class="activate_pro_button">
-                  <div>
-                    <img class="activeProImg" src="Icons/ZeroStateIcons/black_star.svg" style="width: 10px; margin-right: 5px;" />
-                    <!-- <img src="Icons/ZeroStateIcons/loading.png" style="width: 10px; margin-right: 5px;" /> -->
-                    Activate Pro
+            <!-- Add License Key Page -->
+            <div class="main_nav_div_zero_state_sub">
+              <label
+                style="
+                  font-weight: 400;
+                  font-size: 12px;
+                  color: black;
+                  padding-left: 15px;
+                "
+              >
+                Let's activiate Pro
+              </label>
+
+              <div style="padding: 8px 15px 0 15px">
+                <div>
+                  <div class="input-container_sub">
+                    <!-- <span class="input-icon_sub">🔑</span> -->
+                    <img
+                      src="Icons/ZeroStateIcons/keyLogo.svg"
+                      class="input-icon_sub"
+                    />
+
+                    <input
+                      type="text"
+                      placeholder="License Key"
+                      class="license-input_sub"
+                    />
                   </div>
-                </button>
+                  <label class="license_key_message"
+                    >You'll find the key in your inbox after purchase</label
+                  >
 
-                <span class="BackFromLicense" id="BackFromLicensePage">
-                  <img src="Icons/ZeroStateIcons/arrowLeft.svg" style="width: 8px;" />
-                  Back         
-                </span>          
-  
+                  <button id="activiatePro" class="activate_pro_button">
+                    <div>
+                      <img
+                        class="activeProImg"
+                        src="Icons/ZeroStateIcons/black_star.svg"
+                        style="width: 10px; margin-right: 5px"
+                      />
+                      <!-- <img src="Icons/ZeroStateIcons/loading.png" style="width: 10px; margin-right: 5px;" /> -->
+                      Activate Pro
+                    </div>
+                  </button>
 
+                  <span class="BackFromLicense" id="BackFromLicensePage">
+                    <img
+                      src="Icons/ZeroStateIcons/arrowLeft.svg"
+                      style="width: 8px"
+                    />
+                    Back
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
 
+            <!-- Instagram Sort by date vs items -->
+            <div class="InstaMain" style="display: none">
+              <div class="main_nav_div">
+                <div class="segmented-control">
+                  <button class="itemButtonClass" id="itemButton">
+                    Sort by Items
+                  </button>
+                  <button class="dateRangeButtonClass" id="dateRangeButton">
+                    Sort by Date
+                  </button>
+                </div>
 
+                <div class="nav_button_div_one">
+                  <select class="drop_down" id="no_reels_selected" active="on">
+                    <option value="25_reels" selected>Latest 25 Items</option>
+                    <option value="50_reels">Latest 50 Items</option>
+                    <option value="100_reels">Latest 100 Items</option>
+                    <option value="200_reels">Latest 200 Items</option>
+                    <option value="500_reels">Latest 500 Items</option>
+                    <option value="1000_reels">Latest 1K Items</option>
+                    <option value="2000_reels">Latest 2K Items</option>
+                    <option value="all_reels">All Items</option>
+                  </select>
 
-          <!-- Instagram Sort by date vs items -->
-          <div class="InstaMain" style="display: none;"> 
-          <div class="main_nav_div" >
-            <div class="segmented-control">
-              <button class="itemButtonClass" id="itemButton">Sort by Items</button>
-              <button class="dateRangeButtonClass" id="dateRangeButton">Sort by Date</button>
-            </div>
+                  <select
+                    class="drop_down_dates"
+                    id="dates_selected"
+                    active="off"
+                  >
+                    <option value="1_week" selected>
+                      Posts from 1 Week Back
+                    </option>
+                    <option value="1_month">Posts from 1 Month Back</option>
+                    <option value="3_month">Posts from 3 Months Back</option>
+                    <option value="6_month">Posts from 6 Months Back</option>
+                    <option value="1_year">Posts from 1 Year Back</option>
+                    <option value="all_reels">All Items</option>
+                  </select>
 
-            <div class="nav_button_div_one">
-              <select class="drop_down" id="no_reels_selected" active="on">
-                <option value="25_reels" selected>Latest 25 Items</option>
-                <option value="50_reels">Latest 50 Items</option>
-                <option value="100_reels">Latest 100 Items</option>
-                <option value="200_reels">Latest 200 Items</option>
-                <option value="500_reels">Latest 500 Items</option>
-                <option value="1000_reels">Latest 1K Items</option>
-                <option value="2000_reels">Latest 2K Items</option>
-                <option value="all_reels">All Items</option>
-              </select>
-
-              <select class="drop_down_dates" id="dates_selected" active="off">
-                <option value="1_week" selected>Posts from 1 Week Back</option>
-                <option value="1_month">Posts from 1 Month Back</option>
-                <option value="3_month">Posts from 3 Months Back</option>
-                <option value="6_month">Posts from 6 Months Back</option>
-                <option value="1_year">Posts from 1 Year Back</option>
-                <option value="all_reels">All Items</option>
-              </select>
-
-              <!-- <label class="OnlyWorksPosts" id="proFeatureOnly">Upgrade to Pro to unlock</label>
+                  <!-- <label class="OnlyWorksPosts" id="proFeatureOnly">Upgrade to Pro to unlock</label>
               <label class="OnlyWorksPosts" id="instaItemsWarning">Accuracy drops past 1K Posts</label> -->
-              <label class="OnlyWorksPosts" id="OnlyWorksPosts">Only works on Posts</label>
+                  <label class="OnlyWorksPosts" id="OnlyWorksPosts"
+                    >Only works on Posts</label
+                  >
+                </div>
+              </div>
+
+              <!-- Instagram Liks, Views, etc  -->
+              <div class="insta_tiktok_menus" style="padding: 0 15px">
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 71%;
+                    margin: 10px 0 3px;
+                  "
+                ></div>
+
+                <!-- Instagram views, comments, etc. -->
+                <div id="insta_sort_menu" class="buttonMainDiv">
+                  <button id="sortLikesClick" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/LoveGrey.svg"
+                        style="width: 11px; margin-right: 10px"
+                      />
+                      <span>Likes</span>
+                    </div>
+                  </button>
+
+                  <button id="sortViewsClick" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/play.svg"
+                        style="width: 10px; margin-right: 11px"
+                      />
+                      <span>Views</span>
+                    </div>
+                  </button>
+
+                  <button id="sortCommentsClick" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/ChatGrey.svg"
+                        style="width: 11px; margin-right: 10px"
+                      />
+                      <span>Comments</span>
+                    </div>
+                  </button>
+
+                  <button id="sortOldestClicks" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/SortFeedOld.svg"
+                        style="width: 11px; margin-right: 10px"
+                      />
+                      <span>Oldest</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <!-- Instagram Liks, Views, etc  -->
-          <div class="insta_tiktok_menus" style="padding: 0 15px;">
-          <div style="display: flex; flex-direction: column; justify-content: flex-start; width: 71%; margin: 10px 0 3px;"></div>
+            <!-- TIKTOK -->
+            <div class="TikTokMain" style="display: none">
+              <div class="main_nav_div_tiktok">
+                <div class="segmented-control">
+                  <button class="itemButtonClassTikTok" id="itemButtonTikTok">
+                    Sort by TikToks
+                  </button>
+                  <button
+                    class="dateRangeButtonClassTikTok"
+                    id="dateRangeButtonTikTok"
+                  >
+                    Sort by Date
+                  </button>
+                </div>
 
-          <!-- Instagram views, comments, etc. -->
-          <div id="insta_sort_menu" class="buttonMainDiv" >
-            <button id="sortLikesClick" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/LoveGrey.svg" style="width: 11px; margin-right: 10px;" />
-                <span>Likes</span>
+                <div class="nav_button_div_one">
+                  <select
+                    class="drop_down_tiktok"
+                    id="no_reels_selected_tiktok"
+                    active="on"
+                  >
+                    <option value="25_reels" selected>Latest 25 TikToks</option>
+                    <option value="50_reels">Latest 50 TikToks</option>
+                    <option value="100_reels">Latest 100 TikToks</option>
+                    <option value="200_reels">Latest 200 TikToks</option>
+                    <option value="500_reels">Latest 500 TikToks</option>
+                    <option value="1000_reels">Latest 1K TikToks</option>
+                    <option value="2000_reels">Latest 2K TikToks</option>
+                    <option value="all_reels">All TikToks</option>
+                  </select>
+
+                  <select
+                    class="drop_down_dates_tiktok"
+                    id="dates_selected_tiktok"
+                    active="off"
+                  >
+                    <option value="1_week" selected>
+                      TikToks from 1 Week Back
+                    </option>
+                    <option value="1_month">TikToks from 1 Month Back</option>
+                    <option value="3_month">TikToks from 3 Months Back</option>
+                    <option value="6_month">TikToks from 6 Months Back</option>
+                    <option value="1_year">TikToks from 1 Year Back</option>
+                    <option value="all_reels">All TikToks</option>
+                  </select>
+
+                  <label class="OnlyWorksPosts" id="tiktokItemsWarning"
+                    >Accuracy drops past 1K TikToks</label
+                  >
+                </div>
               </div>
-            </button>
 
-            <button id="sortViewsClick" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/play.svg" style="width: 10px; margin-right: 11px;" />
-                <span>Views</span>
-              </div>
-            </button>
+              <!-- TikTok views, comments, etc. -->
+              <div class="insta_tiktok_menus" style="padding: 10px 15px">
+                <div id="tiktok_sort_menu" class="buttonMainDiv">
+                  <button id="sortLikesClickTikTok" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/LoveGrey.svg"
+                        style="width: 11px; margin-right: 10px"
+                      />
+                      <span>Likes</span>
+                    </div>
+                  </button>
 
-            <button id="sortCommentsClick" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/ChatGrey.svg" style="width: 11px; margin-right: 10px;" />
-                <span>Comments</span>
-              </div>
-            </button>
+                  <button id="sortViewsClickTikTok" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/play.svg"
+                        style="width: 10px; margin-right: 11px"
+                      />
+                      <span>Views</span>
+                    </div>
+                  </button>
 
-            <button id="sortOldestClicks" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/SortFeedOld.svg" style="width: 11px; margin-right: 10px;" />
-                <span>Oldest</span>
+                  <button id="sortSharesClickTikTok" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/share.svg"
+                        style="width: 11px; margin-right: 10px"
+                      />
+                      <span>Shares</span>
+                    </div>
+                  </button>
+
+                  <button id="sortCommentsClickTikTok" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/ChatGrey.svg"
+                        style="width: 11px; margin-right: 10px"
+                      />
+                      <span>Comments</span>
+                    </div>
+                  </button>
+
+                  <button id="sortSavesClickTikTok" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/med_save.svg"
+                        style="width: 8px; margin-right: 13px"
+                      />
+                      <span>Saves</span>
+                    </div>
+                  </button>
+
+                  <button id="sortOldestClicksTikTok" class="SortButtonMain">
+                    <div
+                      style="display: flex; width: 100%; align-items: center"
+                    >
+                      <img
+                        src="Icons/ButtonIcons/SortFeedOld.svg"
+                        style="width: 11px; margin-right: 10px"
+                      />
+                      <span>Oldest</span>
+                    </div>
+                  </button>
+                </div>
               </div>
-            </button>
+            </div>
           </div>
         </div>
-      </div>
-         
-          <!-- TIKTOK -->
-          <div class="TikTokMain" style="display: none;"> 
-          <div class="main_nav_div_tiktok" >
-            <div class="segmented-control">
-              <button class="itemButtonClassTikTok" id="itemButtonTikTok">Sort by TikToks</button>
-              <button class="dateRangeButtonClassTikTok" id="dateRangeButtonTikTok">Sort by Date</button>
-            </div>
 
-            <div class="nav_button_div_one">
-              <select class="drop_down_tiktok" id="no_reels_selected_tiktok" active="on">
-                <option value="25_reels" selected>Latest 25 TikToks</option>
-                <option value="50_reels">Latest 50 TikToks</option>
-                <option value="100_reels">Latest 100 TikToks</option>
-                <option value="200_reels">Latest 200 TikToks</option>
-                <option value="500_reels">Latest 500 TikToks</option>
-                <option value="1000_reels">Latest 1K TikToks</option>
-                <option value="2000_reels">Latest 2K TikToks</option>
-                <option value="all_reels">All TikToks</option>
-              </select>
-
-              <select class="drop_down_dates_tiktok" id="dates_selected_tiktok" active="off">
-                <option value="1_week" selected>TikToks from 1 Week Back</option>
-                <option value="1_month">TikToks from 1 Month Back</option>
-                <option value="3_month">TikToks from 3 Months Back</option>
-                <option value="6_month">TikToks from 6 Months Back</option>
-                <option value="1_year">TikToks from 1 Year Back</option>
-                <option value="all_reels">All TikToks</option>
-              </select>
-
-              <label class="OnlyWorksPosts" id="tiktokItemsWarning">Accuracy drops past 1K TikToks</label>
-
-            </div>
-          </div>
-
-          <!-- TikTok views, comments, etc. -->
-          <div class="insta_tiktok_menus" style="padding: 10px 15px;">
-          <div id="tiktok_sort_menu" class="buttonMainDiv" >
-            <button id="sortLikesClickTikTok" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/LoveGrey.svg" style="width: 11px; margin-right: 10px;" />
-                <span>Likes</span>
-              </div>
-            </button>
-
-            <button id="sortViewsClickTikTok" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/play.svg" style="width: 10px; margin-right: 11px;" />
-                <span>Views</span>
-              </div>
-            </button>
-
-            <button id="sortSharesClickTikTok" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/share.svg" style="width: 11px; margin-right: 10px;" />
-                <span>Shares</span>
-              </div>
-            </button>
-
-            <button id="sortCommentsClickTikTok" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/ChatGrey.svg" style="width: 11px; margin-right: 10px;" />
-                <span>Comments</span>
-              </div>
-            </button>
-
-            <button id="sortSavesClickTikTok" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/med_save.svg" style="width: 8px; margin-right: 13px;" />
-                <span>Saves</span>
-              </div>
-            </button>
-
-            <button id="sortOldestClicksTikTok" class="SortButtonMain">
-              <div style="display: flex; width: 100%; align-items: center;">
-                <img src="Icons/ButtonIcons/SortFeedOld.svg" style="width: 11px; margin-right: 10px;" />
-                <span>Oldest</span>
-              </div>
-            </button>
-          </div>   
-        </div>
-      </div>
-
-          
-        </div> 
-
-      </div>
-
-      <!-- FOOTER -->
-      <!-- <div class="footer_div_again" style="display: flex;">
+        <!-- FOOTER -->
+        <!-- <div class="footer_div_again" style="display: flex;">
         <a class="email_button" href="https://discord.gg/NKB9FhAbcm" target="_blank" style="text-decoration: none;">
           <div class="footer_text_again">
             <p class="footer_text_again_subheader">
@@ -264,69 +383,88 @@
         </a>
       </div> -->
 
-      <!-- SUBS FOOTER -->
-      <div id="subFooter" class="footer_div_again_sub" style="display: none;">
-        <div class="sub_footer_one">
-          <div class="footer_text_again_sub">
-            <p class="footer_text_again_subheader_sub_bottom">
-              Go Pro for Unlimited Sorting & Exporting 
-            </p>
-          </div>
+        <!-- SUBS FOOTER -->
+        <div id="subFooter" class="footer_div_again_sub" style="display: none">
+          <div class="sub_footer_one">
+            <div class="footer_text_again_sub">
+              <p class="footer_text_again_subheader_sub_bottom">
+                Go Pro for Unlimited Sorting & Exporting
+              </p>
+            </div>
 
-          <button id="get_pro_button" class="subscribe_button" >
-              <img src="Icons/ZeroStateIcons/black_star.svg" style="width: 10px; margin-right: 3px;" />
+            <button id="get_pro_button" class="subscribe_button">
+              <img
+                src="Icons/ZeroStateIcons/black_star.svg"
+                style="width: 10px; margin-right: 3px"
+              />
               Get Pro
-          </button>
-          <div class="footer_text_again_sub">
-            <p class="footer_text_again_subheader_sub_bottom">
-              <img src="Icons/ZeroStateIcons/key_banner.png" style="width: 8px; margin-right: 1px;" />
-               Have a License? 
-              <span id="EnterLicenseKey" class="enter-key" >
-                Activate Here         
-              </span>          
-            </p>
+            </button>
+            <div class="footer_text_again_sub">
+              <p class="footer_text_again_subheader_sub_bottom">
+                <img
+                  src="Icons/ZeroStateIcons/key_banner.png"
+                  style="width: 8px; margin-right: 1px"
+                />
+                Have a License?
+                <span id="EnterLicenseKey" class="enter-key">
+                  Activate Here
+                </span>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Send Email FOOTER -->
-      <div id="sendEmailFooter" class="footer_div_again_sub" style="display: none;">
-        <div class="sub_footer_one">
-          <div class="footer_text_again_sub">
-            <p class="footer_text_again_subheader_sub_bottom">
-              Have questions? 
-              <a href="mailto:taher.el.sheikh@gmail.com" class="footer-text-link">
-                Send me an email
-              </a>      
-            </p>
-            <!-- <img src="Icons/TaherSolo.svg" class="TaherSolo animate__animated animate__bounceInRight"/> -->
+        <!-- Send Email FOOTER -->
+        <div
+          id="sendEmailFooter"
+          class="footer_div_again_sub"
+          style="display: none"
+        >
+          <div class="sub_footer_one">
+            <div class="footer_text_again_sub">
+              <p class="footer_text_again_subheader_sub_bottom">
+                Have questions?
+                <a
+                  href="mailto:taher.el.sheikh@gmail.com"
+                  class="footer-text-link"
+                >
+                  Send me an email
+                </a>
+              </p>
+              <!-- <img src="Icons/TaherSolo.svg" class="TaherSolo animate__animated animate__bounceInRight"/> -->
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- <a class="email_button" href="https://discord.gg/NKB9FhAbcm" target="_blank" style="text-decoration: none;"> -->
+        <!-- <a class="email_button" href="https://discord.gg/NKB9FhAbcm" target="_blank" style="text-decoration: none;"> -->
 
-      <!-- Let's connect on Discord FOOTER -->
-      <div id="joinDiscord" class="footer_div_again_sub" style="display: none;">
-        <div class="sub_footer_one">
-          <div class="footer_text_again_sub">
-            <p class="footer_text_again_subheader_sub_bottom">
-              Thanks for being Pro. Let's connect on
-              <a href="https://discord.gg/NKB9FhAbcm" target="_blank" class="footer-text-link">
-                Discord
-              </a>      
-            </p>
-            <!-- <img src="Icons/TaherSolo.svg" class="TaherSolo animate__animated animate__bounceInRight"/> -->
+        <!-- Let's connect on Discord FOOTER -->
+        <div
+          id="joinDiscord"
+          class="footer_div_again_sub"
+          style="display: none"
+        >
+          <div class="sub_footer_one">
+            <div class="footer_text_again_sub">
+              <p class="footer_text_again_subheader_sub_bottom">
+                Thanks for being Pro. Let's connect on
+                <a
+                  href="https://discord.gg/NKB9FhAbcm"
+                  target="_blank"
+                  class="footer-text-link"
+                >
+                  Discord
+                </a>
+              </p>
+              <!-- <img src="Icons/TaherSolo.svg" class="TaherSolo animate__animated animate__bounceInRight"/> -->
+            </div>
           </div>
         </div>
+
+        <script src="popup_scripts/popup.js"></script>
+        <script src="popup_scripts/popup_subs.js"></script>
+        <script src="popup_scripts/confetti.js"></script>
       </div>
-      
-
-
-      <script src="popup_scripts/popup.js"></script>
-      <script src="popup_scripts/popup_subs.js"></script>
-      <script src="popup_scripts/confetti.js"></script>
     </div>
-  </div>
-</body>
+  </body>
 </html>

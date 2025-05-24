@@ -1,4 +1,20 @@
-window.addEventListener("message",e=>{if(e.data.insta_banner_notification){let t=e.data.count,n=e.data.type;injectSortFeedBanner(t,n)}});function injectSortFeedBanner(e=25,t="Posts"){const n=document.querySelector(".sort-banner");if(n){const r=n.querySelector(".message");r&&(r.innerHTML=`<span style="font-weight: 600;">${e} ${t}</span> Collected! Please don\u2019t scroll`);return}const a=document.createElement("style");a.textContent=`
+window.addEventListener("message", (e) => {
+  if (e.data.insta_banner_notification) {
+    let t = e.data.count,
+      n = e.data.type;
+    injectSortFeedBanner(t, n);
+  }
+});
+function injectSortFeedBanner(e = 25, t = "Posts") {
+  const n = document.querySelector(".sort-banner");
+  if (n) {
+    const r = n.querySelector(".message");
+    r &&
+      (r.innerHTML = `<span style="font-weight: 600;">${e} ${t}</span> Collected! Please don\u2019t scroll`);
+    return;
+  }
+  const a = document.createElement("style");
+  (a.textContent = `
   @keyframes slideBounceDown {
     0% {
       transform: translate(-50%, -120%);
@@ -99,10 +115,30 @@ window.addEventListener("message",e=>{if(e.data.insta_banner_notification){let t
         font-size: 14px;
       }
     }
-  `,document.head.appendChild(a);const o=document.createElement("div");o.className="sort-banner",o.innerHTML=`
+  `),
+    document.head.appendChild(a);
+  const o = document.createElement("div");
+  (o.className = "sort-banner"),
+    (o.innerHTML = `
   <img class="icon" src="${chrome.runtime.getURL("Icons/16 Sort Feed.png")}" />
   <div class="message">
     <span style="font-weight: 600;">${e} ${t}</span> Collected! Please don\u2019t scroll
   </div>
   <button class="stop-btn">Stop Sorting</button>
-`,o.querySelector(".stop-btn").addEventListener("click",()=>{sessionStorage.setItem("sortFeedStopSorting","on")}),document.body.appendChild(o)}function removeSortFeedBanner(){const e=document.querySelector(".sort-banner");e&&(e.style.animation="slideBounceUp 0.25s ease forwards",setTimeout(()=>{e.remove()},250))}window.addEventListener("message",e=>{e.data.insta_banner_notification_remove&&removeSortFeedBanner()});
+`),
+    o.querySelector(".stop-btn").addEventListener("click", () => {
+      sessionStorage.setItem("sortFeedStopSorting", "on");
+    }),
+    document.body.appendChild(o);
+}
+function removeSortFeedBanner() {
+  const e = document.querySelector(".sort-banner");
+  e &&
+    ((e.style.animation = "slideBounceUp 0.25s ease forwards"),
+    setTimeout(() => {
+      e.remove();
+    }, 250));
+}
+window.addEventListener("message", (e) => {
+  e.data.insta_banner_notification_remove && removeSortFeedBanner();
+});
