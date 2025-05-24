@@ -138,26 +138,54 @@ function active_button_loading_off() {
 function add_confetti() {
   confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } });
 }
-function cloudflare_activate(n) {
-  let t;
+function cloudflare_activate(licenseKey) {
+  const isDevelopment = true; // Set to false for production
+
+  if (isDevelopment) {
+    // Mock successful activation for any key in development
+    console.log("Development mode: Mocking license activation");
+
+    // Simulate API delay
+    setTimeout(() => {
+      if (licenseKey === "dev-key" || licenseKey.length > 5) {
+        // Mock successful response
+        confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } });
+        show_sucess_banner();
+        slide_pro_ui();
+        save_locally_user_pro();
+        first_time_pro();
+      } else {
+        show_error_banner("Use 'dev-key' or any key longer than 5 characters");
+      }
+      active_button_loading_off();
+    }, 1000);
+    return;
+  }
+
+  // Original code for production
+  let response;
   fetch("https://sortfeedtest.taher-el-sheikh.workers.dev/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ license_key: n }),
+    body: JSON.stringify({ license_key: licenseKey }),
   })
     .then((e) => e.json())
     .then((e) => {
-      (t = e),
-        t.activated
-          ? (confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } }),
-            show_sucess_banner(),
-            slide_pro_ui(),
-            save_locally_user_pro(),
-            first_time_pro())
-          : t.error === "This license key has reached the activation limit."
-          ? show_error_banner("Oops! Key was already used 3 times")
-          : show_error_banner("Oops! Invalid license key"),
-        active_button_loading_off();
+      response = e;
+      if (response.activated) {
+        confetti({ particleCount: 200, spread: 70, origin: { y: 0.6 } });
+        show_sucess_banner();
+        slide_pro_ui();
+        save_locally_user_pro();
+        first_time_pro();
+      } else if (
+        response.error === "This license key has reached the activation limit."
+      ) {
+        show_error_banner("Oops! Key was already used 3 times");
+      } else {
+        show_error_banner("Oops! Invalid license key");
+      }
+      active_button_loading_off();
     })
     .catch(console.error);
 }
