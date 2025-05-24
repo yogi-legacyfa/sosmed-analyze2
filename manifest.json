@@ -1,0 +1,41 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "Icons/128 Sort Feed.png",
+         "16": "Icons/16 Sort Feed.png",
+         "48": "Icons/48 Sort Feed.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "Animate/animate.css" ],
+      "js": [ "Instagram/init_sortfeed_instagram.js", "Instagram/inject_instagram_script.js", "Instagram/show_overlay_banner.js", "Instagram/banner_on_insta.js", "Instagram/export/csv_insta_export_function.js", "Instagram/export/json_insta_export_function.js", "Instagram/export/excel_insta_export_function.js", "Instagram/export/xlsx.full.min.js" ],
+      "matches": [ "https://www.instagram.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "css": [ "Animate/animate.css" ],
+      "js": [ "Tiktok/init_sortfeed_tiktok.js", "Tiktok/inject_tiktok_script.js", "Tiktok/update_tiktok_ui.js", "Tiktok/banner_on_tiktok.js", "Tiktok/export/csv_tiktok_export_function.js", "Tiktok/export/json_tiktok_export_function.js", "Tiktok/export/excel_tiktok_export_function.js", "Tiktok/export/xlsx.full.min.js" ],
+      "matches": [ "https://www.tiktok.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Sort TikTok & Instagram Reels and Posts by likes, views, creation date, & more. Also, export data to Excel, CSV, or JSON.",
+   "host_permissions": [ "https://www.instagram.com/*", "https://www.tiktok.com/*" ],
+   "icons": {
+      "128": "Icons/128 Sort Feed.png",
+      "16": "Icons/16 Sort Feed.png",
+      "48": "Icons/48 Sort Feed.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAieNXFImM63pf9nnsNxmHSZA1HmVNj2lDyoxZ6GIFpzl0gDbXOzA1KiqjRj2zFtz3EYaljGCxZeVOhZzfPiEHdLNbf5LuckMhRSCEcl0P0yzyQ5JjKCSbBIUowi78W/E4QWWjDvZrMsap3cOu5zhObh82mFCTUMUhGKfWmmz7jPCOqGOBpajsQc8FtTjx+oSdjkdTbBin0ixxGO7t81Z95NYbBkBQztFDptQSvBlPoBWNLAM+ZYju342Bq6VUEN9cI6645+xNeK9fNlQ9twbnbkTyIZiQgv8K2JcELVl+sGql3BTGmJB4nWyVLy8TkVfRP9ssnGobsxpboLpDZp1LqwIDAQAB",
+   "manifest_version": 3,
+   "name": "Sort Feed | Instagram & TikTok Sorter and Exporter",
+   "permissions": [ "activeTab", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.13",
+   "web_accessible_resources": [ {
+      "matches": [ "https://www.instagram.com/*", "https://www.tiktok.com/*" ],
+      "resources": [ "Icons/*.png", "Instagram/script_instagram.js", "Tiktok/script_tiktok.js" ]
+   } ]
+}
