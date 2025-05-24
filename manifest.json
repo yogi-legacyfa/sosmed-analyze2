@@ -28,18 +28,10 @@
     },
     {
       "css": ["Animate/animate.css"],
-      "js": [
-        "Tiktok/init_sortfeed_tiktok.js",
-        "Tiktok/inject_tiktok_script.js",
-        "Tiktok/update_tiktok_ui.js",
-        "Tiktok/banner_on_tiktok.js",
-        "Tiktok/export/csv_tiktok_export_function.js",
-        "Tiktok/export/json_tiktok_export_function.js",
-        "Tiktok/export/excel_tiktok_export_function.js",
-        "Tiktok/export/xlsx.full.min.js"
-      ],
+      "js": ["Tiktok/realistic_tiktok_sorter.js"],
       "matches": ["https://www.tiktok.com/*"],
-      "run_at": "document_start"
+      "run_at": "document_end",
+      "all_frames": false
     }
   ],
   "description": "Sort TikTok & Instagram Reels and Posts by likes, views, creation date, & more. Also, export data to Excel, CSV, or JSON.",
@@ -61,11 +53,7 @@
   "web_accessible_resources": [
     {
       "matches": ["https://www.instagram.com/*", "https://www.tiktok.com/*"],
-      "resources": [
-        "Icons/*.png",
-        "Instagram/script_instagram.js",
-        "Tiktok/script_tiktok.js"
-      ]
+      "resources": ["Icons/*.png", "Instagram/script_instagram.js"]
     }
   ]
 }
